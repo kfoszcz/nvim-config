@@ -19,10 +19,15 @@ require('lazy').setup({
   --
   -- Use `opts = {}` to force a plugin to be loaded.
   --
-
+  { 'rebelot/kanagawa.nvim', priority = 1000, config = true, opts = {} },
 
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
+  require 'custom/plugins/auto-session',
+
+  require 'custom/plugins/vim-fugitive',
+
+  require 'custom/plugins/oil',
 
   require 'kickstart/plugins/gitsigns',
 
@@ -92,3 +97,4 @@ require('lazy').setup({
 })
 
 -- vim: ts=2 sts=2 sw=2 et
+vim.cmd 'colorscheme kanagawa'
